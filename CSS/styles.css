@@ -1,0 +1,348 @@
+/*linea de comentarios en SASS y CSS*/
+.padreIndex, .padreProductos, .padreContacto, .padreNosotros, .padreSlider {
+  height: 100vh;
+  display: grid; }
+
+.padreSlider .slider1, .padreSlider .slider2, .padreSlider .slider3, .padreSlider .slider4, .padreSlider .slider5, .padreSlider .slider6 {
+  width: 18rem;
+  height: 18rem;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 0 0.3125rem 0.3125rem black; }
+
+.padreSlider .slider1 img, .padreSlider .slider2 img, .padreSlider .slider3 img, .padreSlider .slider4 img, .padreSlider .slider5 img, .padreSlider .slider6 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.7s; }
+
+.padreSlider .slider1 input[type="radio"] + label, .padreSlider .slider2 input[type="radio"] + label, .padreSlider .slider3 input[type="radio"] + label, .padreSlider .slider4 input[type="radio"] + label, .padreSlider .slider5 input[type="radio"] + label, .padreSlider .slider6 input[type="radio"] + label {
+  position: relative;
+  z-index: 50;
+  margin: 0.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border-radius: 50%;
+  border: 0.125rem solid black;
+  cursor: pointer; }
+
+/* aplico reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+hr {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem; }
+
+/* -----Estilos del Menu Hamburgesa-----*/
+div.col-12 {
+  background-color: #eff3d7; }
+
+nav.navbar {
+  background-color: #eff3d7; }
+
+/* -----Aplico Background a los body de cada html-----*/
+#bodyProductos, #bodyNosotros, #bodyContacto, #bodyGaleria, #bodyIndex {
+  background-color: #eff3d7;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+
+/*Personalizacion del Menu de todos los html*/
+nav ul li {
+  background-color: #ffe2b4;
+  display: inline-block;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  padding: 0.625rem;
+  border: double; }
+
+nav ul li:hover {
+  background-color: #c5c6c8; }
+
+/*-----Estilos aplicados para el footer de todos los html-----*/
+.footerContenido {
+  height: 4.375rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #c8cbaf;
+  grid-area: footer;
+  align-items: center;
+  margin-top: auto; }
+
+.footer {
+  height: 4.375rem;
+  display: flex;
+  align-items: center; }
+
+#footer {
+  font-size: 1rem;
+  margin-left: 0.625rem; }
+
+#volverHome {
+  list-style: none;
+  margin: 0.625rem; }
+
+/*-----Estilos aplicados en pagina "Index"-----*/
+.padreIndex {
+  grid-template-areas: "logoMenu logoMenu logoMenu" "frase frase frase" "lista lista lista" "tabla tabla tabla" "footer footer footer"; }
+  .padreIndex .indexMenu {
+    grid-area: logoMenu; }
+  .padreIndex .indexContenido-01 {
+    grid-area: frase;
+    /* Utilizo una Fuente personalizada de Google Fonts*/ }
+    .padreIndex .indexContenido-01 #h2Home {
+      display: block;
+      margin-top: 1.875rem;
+      padding-bottom: 2.5rem;
+      padding-left: 0.625rem;
+      padding-right: 3.125rem;
+      font-family: 'Edu VIC WA NT Beginner', cursive;
+      font-size: 1.875rem;
+      color: brown;
+      line-height: 3.125rem;
+      text-transform: capitalize; }
+  .padreIndex .indexContenido-02 {
+    grid-area: lista;
+    margin-bottom: 1.25rem;
+    /* Cambio el estilo de las listas, muestro los items con cuadrados rellenos */ }
+    .padreIndex .indexContenido-02 .liCuadrado {
+      padding-left: 0.625rem;
+      padding-bottom: 0.625rem;
+      list-style-type: square; }
+  .padreIndex .h3Home {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: sans-serif; }
+  .padreIndex .indexContenido-03 {
+    grid-area: tabla;
+    margin-bottom: 1.25rem; }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-left: 0.625rem; }
+
+td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 0.5rem; }
+
+/*-----Estilos aplicados en pagina "Productos"-----*/
+.padreProductos {
+  grid-template-areas: "logoMenu logoMenu logoMenu" "titulo1 titulo1 titulo1" "lista lista lista" "footer footer footer"; }
+  .padreProductos .productosMenu {
+    grid-area: logoMenu; }
+  .padreProductos .productosContenido-01 {
+    grid-area: titulo1; }
+  .padreProductos .productosContenido-02 {
+    grid-area: lista; }
+
+/* Aplico propiedad de Mapas*/
+.h1Productos {
+  margin: 20px;
+  padding: 5px;
+  font-family: "Edu VIC WA NT Beginner" cursive;
+  font-size: 20px;
+  color: brown; }
+
+/* Aplico estilos a la lista*/
+#ulProductos {
+  margin-left: 2.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+.li1Productos {
+  margin: 0.625rem; }
+
+.li2Productos {
+  margin-left: 1.875rem; }
+
+/*-----Estilos aplicados en pagina "Contacto"-----*/
+.padreContacto {
+  grid-template-areas: "logoMenu logoMenu logoMenu" "titulo titulo titulo" "form form form" "footer footer footer"; }
+  .padreContacto .contactoMenu {
+    grid-area: logoMenu; }
+  .padreContacto .contactoContenido-01 {
+    grid-area: titulo;
+    height: 1.6rem; }
+  .padreContacto .contactoContenido-02 {
+    grid-area: form; }
+
+#h1Contacto {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  color: brown;
+  font-size: 1.5625rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  text-align: left; }
+
+#formContacto {
+  margin: 0.625rem;
+  background-color: #f7fac2; }
+  #formContacto fieldset {
+    margin: 0.625rem; }
+  #formContacto legend {
+    margin: 0.625rem;
+    font-family: sans-serif;
+    font-weight: bold; }
+
+/*-----Estilos aplicados en pagina "Nosotros"-----*/
+.padreNosotros {
+  grid-template-areas: "logoMenu" "titulo" "frase" "about" "footer"; }
+  .padreNosotros .nosotrosMenu {
+    grid-area: logoMenu; }
+  .padreNosotros .nosotrosContenido-01 {
+    grid-area: titulo; }
+  .padreNosotros .nosotrosContenido-02 {
+    grid-area: frase; }
+  .padreNosotros .nosotrosContenido-03 {
+    grid-area: about; }
+
+#h2Nosotros {
+  color: black;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 1.25rem;
+  font-size: 1.5625rem; }
+
+#h3Nosotros {
+  display: inline-block;
+  border: 0.125rem solid brown;
+  font-style: italic;
+  background-color: #e7daba;
+  margin: 20px;
+  padding: 10px; }
+
+#h4Nosotros {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem; }
+
+.h4Nosotros {
+  margin: 1.25rem;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-items: center; }
+
+.instagram:hover {
+  transform: scale(1.5); }
+
+.facebook:hover {
+  transform: scale(1.5); }
+
+.twitter:hover {
+  transform: scale(1.5); }
+
+/*-----Estilos aplicados en pagina "Galeria"-----*/
+.padreSlider {
+  grid-template-areas: "logoMenu logoMenu logoMenu" "titulo titulo titulo" "slider1 slider2 slider3" "slider4 slider5 slider6" "volver volver volver" "footer footer footer"; }
+  .padreSlider .slider1 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider1 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider1 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .slider2 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider2 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider2 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .slider3 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider3 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider3 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .slider4 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider4 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider4 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .slider5 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider5 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider5 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .slider6 input[type="radio"] {
+    display: none; }
+  .padreSlider .slider6 input[type="radio"]:checked ~ img {
+    opacity: 1; }
+  .padreSlider .slider6 input[type="radio"]:checked + label {
+    background: black;
+    border: 0.125rem solid white; }
+  .padreSlider .galeriaMenu {
+    grid-area: logoMenu; }
+  .padreSlider .galeriaContenido-01 {
+    grid-area: titulo; }
+  .padreSlider .volverInicio {
+    grid-area: volver;
+    margin: 1rem; }
+  .padreSlider .slider1 {
+    grid-area: slider1;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+  .padreSlider .slider2 {
+    grid-area: slider2;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+  .padreSlider .slider3 {
+    grid-area: slider3;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+  .padreSlider .slider4 {
+    grid-area: slider4;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+  .padreSlider .slider5 {
+    grid-area: slider5;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+  .padreSlider .slider6 {
+    grid-area: slider6;
+    margin: 1.25rem;
+    border: 0.25rem solid brown;
+    outline: 0.125rem solid black; }
+
+/* MediaQueries */
+@media screen and (max-width: 800px) {
+  /*-----------Galeria.html-----------*/
+  .padreSlider {
+    grid-template-areas: "logoMenu logoMenu"  "titulo titulo" "slider1 slider2" "slider3 slider4" "slider5 slider6" "volver volver" "footer footer"; } }
+
+@media screen and (max-width: 600px) {
+  /*-----------Galeria.html-----------*/
+  .padreSlider {
+    grid-template-areas: "logoMenu"  "titulo" "slider1"  "slider2" "slider3"  "slider4" "slider5"  "slider6" "volver" "footer"; } }
